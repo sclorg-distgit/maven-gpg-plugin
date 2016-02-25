@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.4
-Release:        11.12%{?dist}
+Release:        11.13%{?dist}
 Summary:        Maven GPG Plugin
 
 License:        ASL 2.0
@@ -16,7 +16,7 @@ BuildArch: noarch
 
 BuildRequires: %{?scl_prefix}plexus-utils
 BuildRequires: %{?scl_prefix_java_common}ant
-BuildRequires: %{?scl_prefix_java_common}maven-local
+BuildRequires: %{?scl_prefix}maven-local
 BuildRequires: %{?scl_prefix}maven-install-plugin
 BuildRequires: %{?scl_prefix}maven-compiler-plugin
 BuildRequires: %{?scl_prefix}maven-plugin-plugin
@@ -71,6 +71,9 @@ set -e -x
 %doc LICENSE NOTICE
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 1.4-11.13
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 1.4-11.12
 - maven33 rebuild #2
 
